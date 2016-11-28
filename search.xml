@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[mark语法实例]]></title>
       <url>%2F2016%2F11%2F28%2Ftest%2F</url>
-      <content type="text"><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是一个mark测试 测试 这是一个测试 大标题小标题 一级标题二级标题三级标题四级标题 无序列表 无序列表 嵌套列表 嵌套列表* 嵌套列表 不如 不如 http://ibruce.info &#x62;&#117;&#x2e;&#x72;&#x75;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d; val s = &quot;hello Markdown&quot; println( s ) sss [test.php]123&lt;?php&gt; echo &apos;hello world&apos;;&lt;php&gt; 123&lt;?php&gt; echo 'hello world';?&gt;]]></content>
+      <content type="text"><![CDATA[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这是一个mark测试 测试 这是一个测试 大标题小标题 一级标题二级标题三级标题四级标题 无序列表 无序列表 嵌套列表 嵌套列表* 嵌套列表 不如 不如 http://ibruce.info &#x62;&#x75;&#46;&#x72;&#117;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#109; val s = &quot;hello Markdown&quot; println( s ) sss [test.php]123&lt;?php&gt; echo &apos;hello world&apos;;&lt;php&gt; 123&lt;?php&gt; echo 'hello world';?&gt;]]></content>
     </entry>
 
     
