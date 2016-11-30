@@ -1018,8 +1018,8 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 48px;
   font-weight: normal;
-  font-family: "Curlz MT";
-  color: #000;
+  font-family: "Chalkduster";
+  color: #fff;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1796,7 +1796,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0d6ab8;
+  background: #751299;
 }
 .links-of-blogroll {
   font-size: 13px;
