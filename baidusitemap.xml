@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/12/01/node-gc-part1/</loc>
+    <lastmod>2016-12-09T04:00:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>《Node.js学习笔记（一）：内存控制与垃圾回收》</title>
+        <pubTime>2016-12-01T03:19:14.000Z</pubTime>
+        
+        <tag>node.js,v8,垃圾回收</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/11/24/helloworld/</loc>
     <lastmod>2016-11-28T07:48:50.000Z</lastmod>
     <data>

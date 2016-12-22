@@ -68,10 +68,12 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="node.js,v8,垃圾回收,">
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="proxukun" type="application/atom+xml">
@@ -86,19 +88,33 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。
-过去&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他">
+<meta name="description" content="Node就是一群前端的自嗨
+
+
+
+&amp;lt;-未完待续-&amp;gt;
+V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="序">
-<meta property="og:url" content="http://yoursite.com/2016/11/24/helloworld/index.html">
+<meta property="og:title" content="《Node.js学习笔记（一）：内存控制与垃圾回收》">
+<meta property="og:url" content="http://yoursite.com/2016/12/01/node-gc-part1/index.html">
 <meta property="og:site_name" content="proxukun">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。
-过去&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他">
-<meta property="og:updated_time" content="2016-11-28T07:48:50.000Z">
+<meta property="og:description" content="Node就是一群前端的自嗨
+
+
+
+&amp;lt;-未完待续-&amp;gt;
+V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指">
+<meta property="og:image" content="http://ohhpn0w2k.bkt.clouddn.com/20140725225453475.jpg">
+<meta property="og:updated_time" content="2016-12-09T04:00:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="序">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。
-过去&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他">
+<meta name="twitter:title" content="《Node.js学习笔记（一）：内存控制与垃圾回收》">
+<meta name="twitter:description" content="Node就是一群前端的自嗨
+
+
+
+&amp;lt;-未完待续-&amp;gt;
+V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指">
+<meta name="twitter:image" content="http://ohhpn0w2k.bkt.clouddn.com/20140725225453475.jpg">
 
 
 
@@ -126,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/24/helloworld/">
+  <link rel="canonical" href="http://yoursite.com/2016/12/01/node-gc-part1/">
 
 
 
 
 
-  <title> 序 | proxukun </title>
+  <title> 《Node.js学习笔记（一）：内存控制与垃圾回收》 | proxukun </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +302,7 @@
   
 
   <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/24/helloworld/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/01/node-gc-part1/">
 
   <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <meta itemprop="name" content="k神">
@@ -310,7 +326,7 @@
             
             
               
-                序
+                《Node.js学习笔记（一）：内存控制与垃圾回收》
               
             
           </h1>
@@ -323,8 +339,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-24T17:27:37+08:00">
-                2016-11-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-01T11:19:14+08:00">
+                2016-12-01
               </time>
             
 
@@ -339,8 +355,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/11/24/helloworld/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/24/helloworld/" itemprop="commentCount"></span>
+                <a href="/2016/12/01/node-gc-part1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/01/node-gc-part1/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -350,7 +366,7 @@
 
           
           
-             <span id="/2016/11/24/helloworld/" class="leancloud_visitors" data-flag-title="序">
+             <span id="/2016/12/01/node-gc-part1/" class="leancloud_visitors" data-flag-title="《Node.js学习笔记（一）：内存控制与垃圾回收》">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -375,13 +391,60 @@
       
 
       
-        <p> <blockquote class="blockquote-center"></blockquote></p>
-<p><footer style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。</footer><br></p>
-<p><footer style="text-align:center;font-weight:bold;color:red">过去</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他来213寝室，深情的说了这句我很喜欢的话，虽然我忘了上下文，虽然我觉得他单纯为了装逼，不过，我喜欢。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到现在我还记得很多年前那个夏天的早晨，九点的教学楼到处弥漫着那个小岛上夏天特有的味道，慵懒的阳光和通宵打游戏后朦胧的睁不开的双眼。不为什么，只是感觉，那几年是人生中最好的时光，懒散、无虑，有大把大把的时间可以瘫在图书馆顶楼的沙发上思考自己想做什么，虽然一般除了抄作业就是看小说。我其实很喜欢小岛上的时光，我想念烧仙草、大开杯、海蛎煎、黄则和还有大径村那条小吃街上所有的小吃，还有那个我吃了好几年没变过的香菇鸡丁盖浇饭配纯牛奶。虽然养成了拖延癌晚期，但那里改变了我的一切。</p>
-<a id="more"></a>
-<p><footer style="text-align:center;font-weight:bold;color:red">现在</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一眨眼来帝都快一年了，一年前的这时候，我还在先研院的单间里通宵打游戏，那时候我做梦都想不到，现在会在这个离家一千多里的地方一个人学习、工作、生活。记得那时候刚下火车，我好奇的看了眼地铁口茫茫人海，琢磨了好久才想明白自己已经在一个完全陌生的地方，一个自己几个月前还坚定的认为打死也不来的地方，去面对一群没见过面的人。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人生就是这么的奇妙。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有的时候，拼命想去获取一个看似应该属于自己的东西，一个晃神老天就狠狠散了你一巴掌，然后缺心眼地嘲讽你的无能。命是个很操蛋的东西，不是你的东西，你怎么努力抢也抢不到，关键你还会觉得这真的是你的东西啊。就像很久以前，我就是想找个离家近点的学校，最后脸被啪啪啪地抽肿。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我一直觉得自己是个不爱折腾不思进取不求变化的人，偏偏误打误撞当了个程序员，当然不思进取可能有点过。作为一名非典型码农，你要我开篇写个Helloworld，诶，我觉得你是在污辱我情操，但凡有点底线的码农都不会跟风写个Helloworld，你写个HelloKitty都行，虽然码农并不是什么很丢脸的事。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其实我费尽心思琢磨了好久，想写点带点灰色嘲讽的『序』来凸显自己的高逼格，以作为哥哥职业生涯的开端，然后才发现，自己已经不比当年的才思泉涌，上了年纪的人，思绪有点慢，那就酱紫吧。</p>
-<p><footer style="text-align:center;font-weight:bold;color:red">未来</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多年前我第一次踏进大学校门的时候，就明白了一个道理。大家都说，没有人会知道自己的未来是怎样。其实这话不对。大家都知道自己的未来是什么样的，但是又不敢承认，也不知道这个未来要多久，有多难，这个未来和我预期的有多大的契合度，自己能不能在这个过程中坚持下来，又愿意付出多少。这事其实很残酷。然后，还有很多鸡汤会和你说，年轻人不要急，一步一步慢慢来。哔哔哔哔，如果年轻的时候，我一定会这么说，我不远千里跑到这人生地不熟的地方你叫我慢慢来，是你逗我还是想我逗你。不过想想现在都二十好几了，还是慢慢来吧。</p>
-<p><footer style="text-align:center;font-weight:bold;color:red">后记</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大晚上的，居然有个小哥说我浪，诶，人如果不浪，那和咸鱼有什么区别？</p>
+         <blockquote class="blockquote-center">Node就是一群前端的自嗨</blockquote>
+
+
+
+<p>&lt;-未完待续-&gt;</p>
+<h2 id="V8的垃圾回收机制"><a href="#V8的垃圾回收机制" class="headerlink" title="V8的垃圾回收机制"></a>V8的垃圾回收机制</h2><h3 id="Scavenge算法"><a href="#Scavenge算法" class="headerlink" title="Scavenge算法"></a>Scavenge算法</h3><p>之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指针到达From区结尾，就将触发垃圾回收机制。</p>
+<p><div align="center"><br><img src="http://ohhpn0w2k.bkt.clouddn.com/20140725225453475.jpg" alt=""><br></div></p>
+<blockquote>
+<ol>
+<li>可达性分析：即通过一系列称为GC ROOT的对象作为起点，从这些节点开始向下进行搜索，搜索走过的路径称为引用链,当一个对象到GC ROOT没有任何引用链，则证明该对象不可达。</li>
+<li>一个等价约定：<a href="http://newhtml.net/v8-garbage-collection/" title="V8之旅：垃圾回收器" rel="external nofollow noopener noreferrer" target="_blank">如果一个对象可经由某个被定义为活跃对象的对象，通过某个指针链所访问，则它就是活跃的。其他的都被视为垃圾</a></li>
+</ol>
+</blockquote>
+<h4 id="算法基本流程"><a href="#算法基本流程" class="headerlink" title="算法基本流程"></a>算法基本流程</h4><p>算法对应的伪码如下描述：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">def scavenge():</div><div class="line">  swap(fromSpace, toSpace)</div><div class="line">  allocationPtr = toSpace.bottom</div><div class="line">  scanPtr = toSpace.bottom</div><div class="line"></div><div class="line">  <span class="keyword">for</span> i = <span class="number">0.</span>.len(roots):</div><div class="line">    root = roots[i]</div><div class="line">    <span class="keyword">if</span> inFromSpace(root):</div><div class="line">      rootCopy = copyObject(&amp;allocationPtr, root)</div><div class="line">      setForwardingAddress(root, rootCopy)</div><div class="line">      roots[i] = rootCopy</div><div class="line"></div><div class="line">  <span class="keyword">while</span> scanPtr &lt; allocationPtr:</div><div class="line">    obj = object at scanPtr</div><div class="line">    scanPtr += size(obj)</div><div class="line">    n = sizeInWords(obj)</div><div class="line">    <span class="keyword">for</span> i = <span class="number">0.</span>.n:</div><div class="line">      <span class="keyword">if</span> isPointer(obj[i]) <span class="keyword">and</span> not inOldSpace(obj[i]):</div><div class="line">        fromNeighbor = obj[i]</div><div class="line">        <span class="keyword">if</span> hasForwardingAddress(fromNeighbor):</div><div class="line">          toNeighbor = getForwardingAddress(fromNeighbor)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">          toNeighbor = copyObject(&amp;allocationPtr, fromNeighbor)</div><div class="line">          setForwardingAddress(fromNeighbor, toNeighbor)</div><div class="line">        obj[i] = toNeighbor</div><div class="line"></div><div class="line">def copyObject(*allocationPtr, object):</div><div class="line">  copy = *allocationPtr</div><div class="line">  *allocationPtr += size(object)</div><div class="line">  memcpy(copy, object, size(object))</div><div class="line">  <span class="keyword">return</span> copy</div></pre></td></tr></table></figure></p>
+<p>算法主要有下述几个步骤组成：</p>
+<ul>
+<li>基本环境值修改，如交换From/To区指针等信息</li>
+<li>将GC ROOT根节点所有子节点从From区移动到To区</li>
+<li>复制剩余存活节点<ul>
+<li>第二步复制结束后，allocationPtr指向下一个可复制位置，scanPtr指向第一个开始复制的位置</li>
+<li>对[scanPtr,allocationPtr)这段区间中的每个对象进行判断</li>
+<li>如果是指针，并且不在老生代中<ul>
+<li>如果已经移动到To区，直接修改指针指向的内存地址</li>
+<li>否则，将指针指向的对象移动到To区，同时修改指针指向的内存地址</li>
+</ul>
+</li>
+<li>重复整个流程，指导scanPtr = allocationPtr</li>
+</ul>
+</li>
+</ul>
+<p>整个流程其实类似一个广度优先搜索，从GC ROOT开始，一层一层地往下搜索，直到所有被引用的存活对象都被访问并且被移动到To区为止。</p>
+<h4 id="写屏障"><a href="#写屏障" class="headerlink" title="写屏障"></a>写屏障</h4><p>上节讲到，在存活对象的遍历过程中，会根据GC ROOT判断某个对象是否存活。如果有个位于老生代的指针指向了新生代中某个对象，这时候如果需要去遍历整个老生代，在时间上的消耗将很大。V8的解决方案是在老生代指针指向新生代对象时设置一个写屏障。</p>
+<ul>
+<li>当一个新生代对象刚生成的时候，并不存在一个指向它的指针</li>
+<li>当存在一个老生代对象指向它时，在写屏障中记录这个信息</li>
+<li>当一个新生代对象晋升时，在写屏障中记录这个信息</li>
+</ul>
+<h3 id="Mark-Sweep-amp-Mark-Compact算法"><a href="#Mark-Sweep-amp-Mark-Compact算法" class="headerlink" title="Mark-Sweep&amp;Mark-Compact算法"></a>Mark-Sweep&amp;Mark-Compact算法</h3><p>​    Scavenge算法之所以在新生代垃圾回收中能够有效运行，很大程度上取决于新生代对象在一次垃圾回收后存活对象比较少。但是，老生代对象在每轮垃圾回收中都会有大量的存活对象，这时候如果使用Scavenge算法，将不可避免造成大量的内存移动，因此，V8中使用Mark-Sweep和Mark-Compact算法进行垃圾回收。</p>
+<h4 id="标记算法"><a href="#标记算法" class="headerlink" title="标记算法"></a>标记算法</h4><blockquote>
+<p>位图区：内存页还含有一个页头（包含一些元数据和标识信息）以及一个位图区（用以标记哪些对象是活跃的），位示图是利用二进制的一位来表示磁盘中一个块的作用情况，当其值为0 时表示对应盘块空闲；值为1时盘块已分配。磁盘上所有盘块都有一个二进制位与之对应，这样，由所有盘块所对应的位形成了一个集合称为位示图，位示图用磁盘块存放，称为位图块。</p>
+</blockquote>
+<p>在标记阶段，每个页都会有一个页图用来做标记的位图，位图中每一位代表页中一个字（注：一个字就是一个指针的大小，考虑到指针可能在一页中任何位子出现，）</p>
+<p>标记清除和标记压缩算法的第一步都是标记存活对象，具体流程如下伪码所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">markingDeque = []</div><div class="line">overflow = false</div><div class="line"></div><div class="line">def markHeap():</div><div class="line">  for root in roots:</div><div class="line">    mark(root)</div><div class="line"></div><div class="line">  do:</div><div class="line">    if overflow:</div><div class="line">      overflow = false</div><div class="line">      refillMarkingDeque()</div><div class="line"></div><div class="line">    while !markingDeque.isEmpty():</div><div class="line">      obj = markingDeque.pop()</div><div class="line">      setMarkBits(obj, BLACK)</div><div class="line">      for neighbor in neighbors(obj):</div><div class="line">        mark(neighbor)</div><div class="line">  while overflow</div><div class="line">    </div><div class="line"></div><div class="line">def mark(obj):</div><div class="line">  if markBits(obj) == WHITE:</div><div class="line">    setMarkBits(obj, GREY)</div><div class="line">    if markingDeque.isFull():</div><div class="line">      overflow = true</div><div class="line">    else:</div><div class="line">      markingDeque.push(obj)</div><div class="line"></div><div class="line">def refillMarkingDeque():</div><div class="line">  for each obj on heap:</div><div class="line">    if markBits(obj) == GREY:</div><div class="line">      markingDeque.push(obj)</div><div class="line">      if markingDeque.isFull():</div><div class="line">        overflow = true</div><div class="line">        return</div></pre></td></tr></table></figure>
+<p>### </p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="https://bugs.chromium.org/p/v8/issues/detail?id=847" rel="external nofollow noopener noreferrer" target="_blank">https://bugs.chromium.org/p/v8/issues/detail?id=847</a></li>
+<li><a href="http://www.linuxidc.com/Linux/2015-03/115186.htm" rel="external nofollow noopener noreferrer" target="_blank">http://www.linuxidc.com/Linux/2015-03/115186.htm</a></li>
+<li><a href="http://t.viewpoint.gr/node/deps/v8/src/heap.cc" rel="external nofollow noopener noreferrer" target="_blank">http://t.viewpoint.gr/node/deps/v8/src/heap.cc</a></li>
+<li><a href="http://gold.xitu.io/entry/564ae48200b0d1db3385688e" rel="external nofollow noopener noreferrer" target="_blank">http://gold.xitu.io/entry/564ae48200b0d1db3385688e</a></li>
+<li><a href="https://github.com/drewfish/node-tick-processor" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/drewfish/node-tick-processor</a></li>
+<li><a href="http://newhtml.net/v8-garbage-collection/" rel="external nofollow noopener noreferrer" target="_blank">http://newhtml.net/v8-garbage-collection/</a></li>
+<li><a href="http://www.csdn.net/article/1970-01-01/2826316" rel="external nofollow noopener noreferrer" target="_blank">http://www.csdn.net/article/1970-01-01/2826316</a></li>
+</ul>
 
       
     </div>
@@ -424,20 +487,26 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/node-js-v8-垃圾回收/" rel="tag"># node.js,v8,垃圾回收</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/24/helloworld/" rel="next" title="序">
+                <i class="fa fa-chevron-left"></i> 序
+              </a>
             
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/01/node-gc-part1/" rel="prev" title="《Node.js学习笔记（一）：内存控制与垃圾回收》">
-                《Node.js学习笔记（一）：内存控制与垃圾回收》 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,7 +535,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/24/helloworld/" data-title="序" data-url="http://yoursite.com/2016/11/24/helloworld/">
+      <div class="ds-thread" data-thread-key="2016/12/01/node-gc-part1/" data-title="《Node.js学习笔记（一）：内存控制与垃圾回收》" data-url="http://yoursite.com/2016/12/01/node-gc-part1/">
       </div>
     
   </div>
@@ -490,8 +559,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="k神">
           <p class="site-author-name" itemprop="name">k神</p>
@@ -580,6 +658,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#V8的垃圾回收机制"><span class="nav-number">1.</span> <span class="nav-text">V8的垃圾回收机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scavenge算法"><span class="nav-number">1.1.</span> <span class="nav-text">Scavenge算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#算法基本流程"><span class="nav-number">1.1.1.</span> <span class="nav-text">算法基本流程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#写屏障"><span class="nav-number">1.1.2.</span> <span class="nav-text">写屏障</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mark-Sweep-amp-Mark-Compact算法"><span class="nav-number">1.2.</span> <span class="nav-text">Mark-Sweep&Mark-Compact算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记算法"><span class="nav-number">1.2.1.</span> <span class="nav-text">标记算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">2.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
