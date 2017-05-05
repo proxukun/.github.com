@@ -129,7 +129,7 @@
 <meta property="og:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/d34a930623ccdfce2a87ea5e0d25fb2035a3ff06">
 <meta property="og:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/469565939db09431b19f0ac3be0e6e5f8921f189">
 <meta property="og:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/529330f3fdd5436a53322d924cdf8a7777ad4c18">
-<meta property="og:updated_time" content="2017-05-05T12:47:45.000Z">
+<meta property="og:updated_time" content="2017-05-05T12:53:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="proxukun">
 <meta name="twitter:description" content="BP神经网络学习笔记目录
@@ -434,8 +434,7 @@
 <p>因此，问题的关键在于保证一系列的求导的乘积能够保证『稳定』的变化</p>
 <p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/9443b29af17200ad396b44ef29ff82578048f7cc" alt="图片"><br>如果选择阶跃函数作为激活函数，这一个输入的轻微变化可能导致输出由0变成1，进而影响下一层所有邻接神经元，最终对输出造成极大的变化。<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/e6752f940062f1d87e7c4f80837c4dc393a4b024" alt="图片"><br>因而，在神经网络中，经常选择sigmoid function作为激活函数，这类神经元也被称为S型神经元。权值与偏移值的微小变化，同样反应在输出值的微小变化。</p>
 <p>因此，隐藏层中一个轻微的修改最终将对输出结果造成轻微的影响，在此基础上，我们就可以通过weight与biases的修改保证最终输出朝着预期的方向『平稳』地改进。</p>
-<h2 id="后向反馈神经网络两个假设与四个方程"><a href="#后向反馈神经网络两个假设与四个方程" class="headerlink" title="后向反馈神经网络两个假设与四个方程"></a>后向反馈神经网络两个假设与四个方程</h2><p>### </p>
-<h3 id="两个假设"><a href="#两个假设" class="headerlink" title="两个假设"></a>两个假设</h3><h4 id="假设1"><a href="#假设1" class="headerlink" title="假设1"></a>假设1</h4><h4 id="假设2"><a href="#假设2" class="headerlink" title="假设2"></a>假设2</h4><h3 id="四个方程"><a href="#四个方程" class="headerlink" title="四个方程"></a>四个方程</h3><p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/bbf991c36852ffc444196228d51d618e7d6d87c2" alt="图片"></p>
+<h2 id="后向反馈神经网络两个假设与四个方程"><a href="#后向反馈神经网络两个假设与四个方程" class="headerlink" title="后向反馈神经网络两个假设与四个方程"></a>后向反馈神经网络两个假设与四个方程</h2><h3 id="两个假设"><a href="#两个假设" class="headerlink" title="两个假设"></a>两个假设</h3><h4 id="假设1"><a href="#假设1" class="headerlink" title="假设1"></a>假设1</h4><h4 id="假设2"><a href="#假设2" class="headerlink" title="假设2"></a>假设2</h4><h3 id="四个方程"><a href="#四个方程" class="headerlink" title="四个方程"></a>四个方程</h3><p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/bbf991c36852ffc444196228d51d618e7d6d87c2" alt="图片"></p>
 <h4 id="BP1"><a href="#BP1" class="headerlink" title="BP1"></a>BP1</h4><p>方程一描述的是误差变量的定义，这个变量存在的目的是将反向传播过程中权值矩阵和偏移值矩阵的梯度联系起来。<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/21db3e1aa4287877c5d73fdd54c0fc4e65aa2b85" alt="图片"></p>
 <h4 id="BP2"><a href="#BP2" class="headerlink" title="BP2"></a>BP2</h4><p>方程二描述的是反向传播过程中误差值的传播，从输出层的误差向前传播，并将误差逐层记录，推导过程如下：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/2c0b4e278e37356fca9a3b70d0f797a1511c9eb2" alt="图片"></p>
 <h4 id="BP3"><a href="#BP3" class="headerlink" title="BP3"></a>BP3</h4><p>方程三将误差变量与偏移矩阵的梯度关联在一起<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/1b5e331b60347a32d782d3d480e1da182adece01" alt="图片"></p>
