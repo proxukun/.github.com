@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-09T04:00:49.000Z</updated>
+  <updated>2017-05-05T06:44:05.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/05/05/Bp%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2017/05/05/Bp神经网络学习笔记/</id>
+    <published>2017-05-05T06:44:05.000Z</published>
+    <updated>2017-05-05T06:44:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="BP神经网络学习笔记"><a href="#BP神经网络学习笔记" class="headerlink" title="BP神经网络学习笔记"></a>BP神经网络学习笔记</h1><p>神经网络进行学习的基本前提<br>后向反馈神经网络两个前提与四个公式<br>实现<br>超参数的选择<br>存在的问题与优化点<br>为什么神经网络能够『解决』『所有』问题</p>
+<p>（一）神经网络进行学习的基本前提<br>神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝越来越好的结果变化。重复这个过程，就能保证整个网络在数据的基础上正常的运作起来。<br>如下图所示：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/81242ff69b3e5a787a56a0363a69aff50b045484" alt="图片"></p>
+<p>但问题在于，神经网络各个节点与下一层节点的全连接，导致一个节点激活值的变化影响了下一层所有神经元的输入，并进一步影响后续所有神经元的输入与输出。<br>因此，神经网络最关键的一点就是，激活函数的选择，保证输出值变化的平滑。</p>
+<p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/9443b29af17200ad396b44ef29ff82578048f7cc" alt="图片"></p>
+<p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/e6752f940062f1d87e7c4f80837c4dc393a4b024" alt="图片"></p>
+<p>$$Δoutput≈\sum<em>{j=0}^n \frac{∂output}{∂wj}Δwj+ \sum</em>{j=0}^n \frac{∂output}{∂b}Δb$$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;BP神经网络学习笔记&quot;&gt;&lt;a href=&quot;#BP神经网络学习笔记&quot; class=&quot;headerlink&quot; title=&quot;BP神经网络学习笔记&quot;&gt;&lt;/a&gt;BP神经网络学习笔记&lt;/h1&gt;&lt;p&gt;神经网络进行学习的基本前提&lt;br&gt;后向反馈神经网络两个前提与四个公式&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>《Node.js学习笔记（一）：内存控制与垃圾回收》</title>

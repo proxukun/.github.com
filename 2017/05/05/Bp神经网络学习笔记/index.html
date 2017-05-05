@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="proxukun" type="application/atom+xml">
 
@@ -86,19 +88,23 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。
-过去&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他">
+<meta name="description" content="BP神经网络学习笔记神经网络进行学习的基本前提后向反馈神经网络两个前提与四个公式实现超参数的选择存在的问题与优化点为什么神经网络能够『解决』『所有』问题
+（一）神经网络进行学习的基本前提神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝">
 <meta property="og:type" content="article">
-<meta property="og:title" content="序">
-<meta property="og:url" content="http://yoursite.com/2016/11/24/helloworld/index.html">
+<meta property="og:title" content="proxukun">
+<meta property="og:url" content="http://yoursite.com/2017/05/05/Bp神经网络学习笔记/index.html">
 <meta property="og:site_name" content="proxukun">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。
-过去&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他">
-<meta property="og:updated_time" content="2016-11-28T07:48:50.000Z">
+<meta property="og:description" content="BP神经网络学习笔记神经网络进行学习的基本前提后向反馈神经网络两个前提与四个公式实现超参数的选择存在的问题与优化点为什么神经网络能够『解决』『所有』问题
+（一）神经网络进行学习的基本前提神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝">
+<meta property="og:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/81242ff69b3e5a787a56a0363a69aff50b045484">
+<meta property="og:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/9443b29af17200ad396b44ef29ff82578048f7cc">
+<meta property="og:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/e6752f940062f1d87e7c4f80837c4dc393a4b024">
+<meta property="og:updated_time" content="2017-05-05T06:44:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="序">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。
-过去&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他">
+<meta name="twitter:title" content="proxukun">
+<meta name="twitter:description" content="BP神经网络学习笔记神经网络进行学习的基本前提后向反馈神经网络两个前提与四个公式实现超参数的选择存在的问题与优化点为什么神经网络能够『解决』『所有』问题
+（一）神经网络进行学习的基本前提神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝">
+<meta name="twitter:image" content="http://bos.nj.bpc.baidu.com/v1/agroup/81242ff69b3e5a787a56a0363a69aff50b045484">
 
 
 
@@ -126,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/24/helloworld/">
+  <link rel="canonical" href="http://yoursite.com/2017/05/05/Bp神经网络学习笔记/">
 
 
 
 
 
-  <title> 序 | proxukun </title>
+  <title>  | proxukun </title>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +292,7 @@
   
 
   <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/24/helloworld/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/05/Bp神经网络学习笔记/">
 
   <span style="display:none" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
     <meta itemprop="name" content="k神">
@@ -310,7 +316,7 @@
             
             
               
-                序
+                
               
             
           </h1>
@@ -323,8 +329,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-24T17:27:37+08:00">
-                2016-11-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-05T14:44:05+08:00">
+                2017-05-05
               </time>
             
 
@@ -339,8 +345,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/11/24/helloworld/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/24/helloworld/" itemprop="commentCount"></span>
+                <a href="/2017/05/05/Bp神经网络学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/05/05/Bp神经网络学习笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -350,7 +356,7 @@
 
           
           
-             <span id="/2016/11/24/helloworld/" class="leancloud_visitors" data-flag-title="序">
+             <span id="/2017/05/05/Bp神经网络学习笔记/" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -375,13 +381,12 @@
       
 
       
-        <p> <blockquote class="blockquote-center"></blockquote></p>
-<p><footer style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;世界上有两件东西能够深深地震撼人们的心灵，一件是我们心中崇高的道德准则，另一件是我们头顶上灿烂的星空。</footer><br></p>
-<p><footer style="text-align:center;font-weight:bold;color:red">过去</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;引言其实和这篇序没什么关系，只不过是我很喜欢的一句话。曾经有一个大神大晚上赤裸上半身、抱着把吉他来213寝室，深情的说了这句我很喜欢的话，虽然我忘了上下文，虽然我觉得他单纯为了装逼，不过，我喜欢。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;到现在我还记得很多年前那个夏天的早晨，九点的教学楼到处弥漫着那个小岛上夏天特有的味道，慵懒的阳光和通宵打游戏后朦胧的睁不开的双眼。不为什么，只是感觉，那几年是人生中最好的时光，懒散、无虑，有大把大把的时间可以瘫在图书馆顶楼的沙发上思考自己想做什么，虽然一般除了抄作业就是看小说。我其实很喜欢小岛上的时光，我想念烧仙草、大开杯、海蛎煎、黄则和还有大径村那条小吃街上所有的小吃，还有那个我吃了好几年没变过的香菇鸡丁盖浇饭配纯牛奶。虽然养成了拖延癌晚期，但那里改变了我的一切。</p>
-<a id="more"></a>
-<p><footer style="text-align:center;font-weight:bold;color:red">现在</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一眨眼来帝都快一年了，一年前的这时候，我还在先研院的单间里通宵打游戏，那时候我做梦都想不到，现在会在这个离家一千多里的地方一个人学习、工作、生活。记得那时候刚下火车，我好奇的看了眼地铁口茫茫人海，琢磨了好久才想明白自己已经在一个完全陌生的地方，一个自己几个月前还坚定的认为打死也不来的地方，去面对一群没见过面的人。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人生就是这么的奇妙。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有的时候，拼命想去获取一个看似应该属于自己的东西，一个晃神老天就狠狠散了你一巴掌，然后缺心眼地嘲讽你的无能。命是个很操蛋的东西，不是你的东西，你怎么努力抢也抢不到，关键你还会觉得这真的是你的东西啊。就像很久以前，我就是想找个离家近点的学校，最后脸被啪啪啪地抽肿。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我一直觉得自己是个不爱折腾不思进取不求变化的人，偏偏误打误撞当了个程序员，当然不思进取可能有点过。作为一名非典型码农，你要我开篇写个Helloworld，诶，我觉得你是在污辱我情操，但凡有点底线的码农都不会跟风写个Helloworld，你写个HelloKitty都行，虽然码农并不是什么很丢脸的事。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其实我费尽心思琢磨了好久，想写点带点灰色嘲讽的『序』来凸显自己的高逼格，以作为哥哥职业生涯的开端，然后才发现，自己已经不比当年的才思泉涌，上了年纪的人，思绪有点慢，那就酱紫吧。</p>
-<p><footer style="text-align:center;font-weight:bold;color:red">未来</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多年前我第一次踏进大学校门的时候，就明白了一个道理。大家都说，没有人会知道自己的未来是怎样。其实这话不对。大家都知道自己的未来是什么样的，但是又不敢承认，也不知道这个未来要多久，有多难，这个未来和我预期的有多大的契合度，自己能不能在这个过程中坚持下来，又愿意付出多少。这事其实很残酷。然后，还有很多鸡汤会和你说，年轻人不要急，一步一步慢慢来。哔哔哔哔，如果年轻的时候，我一定会这么说，我不远千里跑到这人生地不熟的地方你叫我慢慢来，是你逗我还是想我逗你。不过想想现在都二十好几了，还是慢慢来吧。</p>
-<p><footer style="text-align:center;font-weight:bold;color:red">后记</footer><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大晚上的，居然有个小哥说我浪，诶，人如果不浪，那和咸鱼有什么区别？</p>
+        <h1 id="BP神经网络学习笔记"><a href="#BP神经网络学习笔记" class="headerlink" title="BP神经网络学习笔记"></a>BP神经网络学习笔记</h1><p>神经网络进行学习的基本前提<br>后向反馈神经网络两个前提与四个公式<br>实现<br>超参数的选择<br>存在的问题与优化点<br>为什么神经网络能够『解决』『所有』问题</p>
+<p>（一）神经网络进行学习的基本前提<br>神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝越来越好的结果变化。重复这个过程，就能保证整个网络在数据的基础上正常的运作起来。<br>如下图所示：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/81242ff69b3e5a787a56a0363a69aff50b045484" alt="图片"></p>
+<p>但问题在于，神经网络各个节点与下一层节点的全连接，导致一个节点激活值的变化影响了下一层所有神经元的输入，并进一步影响后续所有神经元的输入与输出。<br>因此，神经网络最关键的一点就是，激活函数的选择，保证输出值变化的平滑。</p>
+<p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/9443b29af17200ad396b44ef29ff82578048f7cc" alt="图片"></p>
+<p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/e6752f940062f1d87e7c4f80837c4dc393a4b024" alt="图片"></p>
+<p>$$Δoutput≈\sum<em>{j=0}^n \frac{∂output}{∂wj}Δwj+ \sum</em>{j=0}^n \frac{∂output}{∂b}Δb$$</p>
 
       
     </div>
@@ -429,15 +434,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/12/01/node-gc-part1/" rel="next" title="《Node.js学习笔记（一）：内存控制与垃圾回收》">
+                <i class="fa fa-chevron-left"></i> 《Node.js学习笔记（一）：内存控制与垃圾回收》
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/01/node-gc-part1/" rel="prev" title="《Node.js学习笔记（一）：内存控制与垃圾回收》">
-                《Node.js学习笔记（一）：内存控制与垃圾回收》 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -459,14 +464,11 @@
           </div>
           
 
-  <p>热评文章</p>
-  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
-
 
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/24/helloworld/" data-title="序" data-url="http://yoursite.com/2016/11/24/helloworld/">
+      <div class="ds-thread" data-thread-key="2017/05/05/Bp神经网络学习笔记/" data-title="" data-url="http://yoursite.com/2017/05/05/Bp神经网络学习笔记/">
       </div>
     
   </div>
@@ -490,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="k神">
           <p class="site-author-name" itemprop="name">k神</p>
@@ -580,6 +591,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BP神经网络学习笔记"><span class="nav-number">1.</span> <span class="nav-text">BP神经网络学习笔记</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
