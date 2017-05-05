@@ -1,3 +1,3 @@
-http://yoursite.com/2017/05/05/Bp神经网络学习笔记/
+http://yoursite.com/2017/05/05/BP神经忘了学习笔记/
 http://yoursite.com/2016/12/01/node-gc-part1/
 http://yoursite.com/2016/11/24/helloworld/
