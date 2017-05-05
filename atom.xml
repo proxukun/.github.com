@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-05T07:10:01.000Z</updated>
+  <updated>2017-05-05T07:15:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://yoursite.com/2017/05/05/BP%E7%A5%9E%E7%BB%8F%E5%BF%98%E4%BA%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/05/05/BP神经忘了学习笔记/</id>
     <published>2017-05-05T07:10:01.000Z</published>
-    <updated>2017-05-05T07:10:01.000Z</updated>
+    <updated>2017-05-05T07:15:31.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="BP神经网络学习笔记"><a href="#BP神经网络学习笔记" class="headerlink" title="BP神经网络学习笔记"></a>BP神经网络学习笔记</h1><p>##目录</p>
-<ol>
+    <content type="html"><![CDATA[<h1 id="BP神经网络学习笔记"><a href="#BP神经网络学习笔记" class="headerlink" title="BP神经网络学习笔记"></a>BP神经网络学习笔记</h1><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
 <li>神经网络进行学习的基本前提 </li>
 <li>后向反馈神经网络两个前提与四个公式 </li>
 <li>实现 </li>
@@ -31,21 +30,17 @@
 <li>存在的问题与优化点</li>
 <li>为什么神经网络能够『解决』『所有』问题</li>
 </ol>
-<p>##神经网络进行学习的基本前提<br>神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝越来越好的结果变化。重复这个过程，就能保证整个网络在数据的基础上正常的运作起来。<br>如下图所示：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/81242ff69b3e5a787a56a0363a69aff50b045484" alt="图片"></p>
+<h2 id="神经网络进行学习的基本前提"><a href="#神经网络进行学习的基本前提" class="headerlink" title="神经网络进行学习的基本前提"></a>神经网络进行学习的基本前提</h2><p>神经网络之所以能够进行学习，最基本的要素就是，对某个权值（weight）或者偏移值（biases）的轻微修改最终会造成结果的轻微修改。在此基础上，我们就可以通过对weight与biases的修改，来使最终输出结果朝越来越好的结果变化。重复这个过程，就能保证整个网络在数据的基础上正常的运作起来。<br>如下图所示：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/81242ff69b3e5a787a56a0363a69aff50b045484" alt="图片"></p>
 <p>但问题在于，神经网络各个节点与下一层节点的全连接，导致一个节点激活值的变化影响了下一层所有神经元的输入，并进一步影响后续所有神经元的输入与输出。<br>因此，神经网络最关键的一点就是，激活函数的选择，保证输出值变化的平滑。<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/d441e4afa6758a7329621a90413ffd7fc9fdeada" alt="图片"><br>如上述公式所描述，最终结果的变化为权值与偏移值的线性变化，以此保证了输出值变化的可控程度。<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/9443b29af17200ad396b44ef29ff82578048f7cc" alt="图片"><br>如果选择阶跃函数作为激活函数，这一个输入的轻微变化可能导致输出由0变成1，进而影响下一层所有邻接神经元，最终对输出造成极大的变化。<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/e6752f940062f1d87e7c4f80837c4dc393a4b024" alt="图片"><br>因而，在神经网络中，经常选择sigmoid function作为激活函数，这类神经元也被称为S型神经元。权值与偏移值的微小变化，同样反应在输出值的微小变化。</p>
 <p>当我们对权值矩阵进行了一个微小的修改：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/c27adf4d2967b7abc46b888637d38cd9b14cb1e6" alt="图片"><br>这个修改首先会反应在该神经元的激活值上：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/2732cac8ed3188e69b0e58017a55f80534833b3f" alt="图片"><br>这个激活值的变化最终反应到输出层的变化：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/cc5e412675ecc1f2d067434a25da6b7dac692f97" alt="图片"><br>即：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/66601d09675d412db941f059cffaf677a5cfbad0" alt="图片"></p>
 <p>其中，<img src="http://bos.nj.bpc.baidu.com/v1/agroup/b04a43288772e799a5d58bff376f85298986071a" alt="图片">描述的是最终结果对wjk的敏感程度</p>
 <p>如果选中其中一条变化的路线，可以描述为：<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/db79325ca40ef3dd364c432abb0bebb0ff532207" alt="图片"></p>
 <p>因此，隐藏层中一个轻微的修改最终将对输出结果造成轻微的影响，在此基础上，我们就可以通过weight与biases的修改保证最终输出朝着预期的方向『平稳』地改进。</p>
-<p>##后向反馈神经网络两个前提与四个公式</p>
-]]></content>
+<h2 id="后向反馈神经网络两个前提与四个公式"><a href="#后向反馈神经网络两个前提与四个公式" class="headerlink" title="后向反馈神经网络两个前提与四个公式"></a>后向反馈神经网络两个前提与四个公式</h2>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;BP神经网络学习笔记&quot;&gt;&lt;a href=&quot;#BP神经网络学习笔记&quot; class=&quot;headerlink&quot; title=&quot;BP神经网络学习笔记&quot;&gt;&lt;/a&gt;BP神经网络学习笔记&lt;/h1&gt;&lt;p&gt;##目录&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;神经网络进行学习的基本前提 &lt;/li&gt;
-
+      &lt;h1 id=&quot;BP神经网络学习笔记&quot;&gt;&lt;a href=&quot;#BP神经网络学习笔记&quot; class=&quot;headerlink&quot; title=&quot;BP神经网络学习笔记&quot;&gt;&lt;/a&gt;BP神经网络学习笔记&lt;/h1&gt;&lt;h2 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerli
     
     </summary>
     
