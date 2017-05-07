@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-07T05:44:07.000Z</updated>
+  <updated>2017-05-07T05:46:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <title></title>
     <link href="http://yoursite.com/2017/05/07/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/05/07/BP神经网络学习笔记/</id>
-    <published>2017-05-07T05:44:07.000Z</published>
-    <updated>2017-05-07T05:44:07.000Z</updated>
+    <published>2017-05-07T05:46:57.000Z</published>
+    <updated>2017-05-07T05:46:57.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="《神经网络与深度学习》学习笔记"><a href="#《神经网络与深度学习》学习笔记" class="headerlink" title="《神经网络与深度学习》学习笔记"></a>《神经网络与深度学习》学习笔记</h1> <blockquote class="blockquote-center"><br> <footer style="textalign:left;"><br>         康肃问曰：”汝亦知射乎？吾射不亦精乎？”翁曰：”无他， 但手熟尔。<br>  &lt; / footer&gt;<br> </footer></blockquote>
+    <content type="html"><![CDATA[<p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/e60c9297ade15fb6ada14d244b4a2a1ec22e0118" alt="图片"></p>
+<h1 id="《神经网络与深度学习》学习笔记"><a href="#《神经网络与深度学习》学习笔记" class="headerlink" title="《神经网络与深度学习》学习笔记"></a>《神经网络与深度学习》学习笔记</h1> <blockquote class="blockquote-center"><br> <footer style="textalign:left;"><br>         康肃问曰：”汝亦知射乎？吾射不亦精乎？”翁曰：”无他， 但手熟尔。<br>  &lt; / footer&gt;<br> </footer></blockquote>
 
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li>神经网络进行学习的基本前提  </li>
@@ -59,7 +60,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;《神经网络与深度学习》学习笔记&quot;&gt;&lt;a href=&quot;#《神经网络与深度学习》学习笔记&quot; class=&quot;headerlink&quot; title=&quot;《神经网络与深度学习》学习笔记&quot;&gt;&lt;/a&gt;《神经网络与深度学习》学习笔记&lt;/h1&gt; &lt;blockquote class=&quot;b
+      &lt;p&gt;&lt;img src=&quot;http://bos.nj.bpc.baidu.com/v1/agroup/e60c9297ade15fb6ada14d244b4a2a1ec22e0118&quot; alt=&quot;图片&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;《神经网络与深度学习》学习笔记&quot;&gt;&lt;a href=
     
     </summary>
     
