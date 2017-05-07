@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-05-07T08:36:36.000Z</updated>
+  <updated>2017-05-07T08:40:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,12 +19,12 @@
     <title></title>
     <link href="http://yoursite.com/2017/05/07/BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2017/05/07/BP神经网络学习笔记/</id>
-    <published>2017-05-07T08:35:47.000Z</published>
-    <updated>2017-05-07T08:36:36.000Z</updated>
+    <published>2017-05-07T08:40:26.000Z</published>
+    <updated>2017-05-07T08:40:54.000Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<p> title: 《神经网络与深度学习》学习笔记<br> date: 2017-05-07 17:27:37</p>
-<h2 id="tags-神经网络-深度学习"><a href="#tags-神经网络-深度学习" class="headerlink" title=" tags: 神经网络,深度学习"></a> tags: 神经网络,深度学习</h2> <blockquote class="blockquote-center"><br> <footer style="textalign:center;"><br>康肃问曰：”汝亦知射乎？吾射不亦精乎？”翁曰：”无他， 但手熟尔。”<br> </footer></blockquote>
+<p>title: 《神经网络与深度学习》学习笔记<br>date: 2017-05-07 17:27:37</p>
+<h2 id="tags-神经网络-深度学习"><a href="#tags-神经网络-深度学习" class="headerlink" title="tags:  神经网络,深度学习"></a>tags:  神经网络,深度学习</h2> <blockquote class="blockquote-center"><br> <footer style="textalign:center;"><br>康肃问曰：”汝亦知射乎？吾射不亦精乎？”翁曰：”无他， 但手熟尔。”<br> </footer></blockquote>
 
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li>神经网络进行学习的基本前提  </li>
@@ -49,7 +49,7 @@
 <h3 id="BP背后的四个基本等式"><a href="#BP背后的四个基本等式" class="headerlink" title="BP背后的四个基本等式"></a>BP背后的四个基本等式</h3><p>基于梯度下降算法的神经网络训练在上世纪八十年代就已经被提出，但是，优于weight与biases的梯度计算，需要考虑所有可能的路线，每条路线需要根据链式法则计算各个偏导值，这些偏导值存在大量的重复计算，当隐藏层数量与神经元数量增加，计算量将爆炸增长。可行的解决方案包括使用DP记录各个偏导的计算结果，以空间换时间的方式来降低计算时间，不过不知道为什么DP并没有应用在神经网络的训练中。<br><img src="http://bos.nj.bpc.baidu.com/v1/agroup/db79325ca40ef3dd364c432abb0bebb0ff532207" alt="图片"></p>
 <p>后来，有大神提出了通过后向反馈将误差值逐层『平摊』到各个神经元上，而平摊考虑到某个神经元对下一层邻接神经元的『贡献量』，而『贡献量』关联了权值矩阵和偏倚值矩阵的梯度，这个梯度又被应用与梯度下降时目标的<strong><em>学习速率</em></strong>，整个过程只需要从后向前传播一次即可。这种方法极大降低了神经网络训练过程中的计算量，也标志这神经网络训练的实用化。</p>
 <blockquote>
-<p>提到学习速率这个指标，有些资料会说η就是学习速率。<img src="http://bos.nj.bpc.baidu.com/v1/agroup/450613c5b6097557a30618a781260fa51fa45368" alt="图片"><br>η真正代表的是学习步长。在梯度下降训练中，η（步长）表示每次沿梯度最大方向下降一步的距离。真正的学习速率，应该是权值矩阵与偏倚值矩阵的梯度大小，梯度越大，代表学习速率越快。</p>
+<p>提到学习速率这个指标，有些资料会说η就是学习速率。 η真正代表的是学习步长。在梯度下降训练中，η（步长）表示每次沿梯度最大方向下降一步的距离。真正的学习速率，应该是权值矩阵与偏倚值矩阵的梯度大小，梯度越大，代表学习速率越快。</p>
 </blockquote>
 <p>整个后向反馈神经网络的训练，就是将一个误差变量与各个偏导关联在一起，通过这个中间变量来完成偏导的获取，进而实现更新。这两者的关系，可以浓缩为四个基本等式：</p>
 <p><img src="http://bos.nj.bpc.baidu.com/v1/agroup/bbf991c36852ffc444196228d51d618e7d6d87c2" alt="图片"></p>
@@ -74,8 +74,8 @@
     <summary type="html">
     
       &lt;hr&gt;
-&lt;p&gt; title: 《神经网络与深度学习》学习笔记&lt;br&gt; date: 2017-05-07 17:27:37&lt;/p&gt;
-&lt;h2 id=&quot;tags-神经网络-深度学习&quot;&gt;&lt;a href=&quot;#tags-神经网络-深度学习&quot; class=&quot;headerlink&quot; title
+&lt;p&gt;title: 《神经网络与深度学习》学习笔记&lt;br&gt;date: 2017-05-07 17:27:37&lt;/p&gt;
+&lt;h2 id=&quot;tags-神经网络-深度学习&quot;&gt;&lt;a href=&quot;#tags-神经网络-深度学习&quot; class=&quot;headerlink&quot; title=&quot;
     
     </summary>
     
