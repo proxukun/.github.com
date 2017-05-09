@@ -90,8 +90,8 @@
 
 
 
-&amp;lt;-未完待续-&amp;gt;
-V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指">
+&amp;lt;-已太监-&amp;gt;
+V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指针到">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Node.js学习笔记（一）：内存控制与垃圾回收》">
 <meta property="og:url" content="http://yoursite.com/2016/12/01/node-gc-part1/index.html">
@@ -100,18 +100,18 @@ V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分�
 
 
 
-&amp;lt;-未完待续-&amp;gt;
-V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指">
+&amp;lt;-已太监-&amp;gt;
+V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指针到">
 <meta property="og:image" content="http://ohhpn0w2k.bkt.clouddn.com/20140725225453475.jpg">
-<meta property="og:updated_time" content="2016-12-09T04:00:49.000Z">
+<meta property="og:updated_time" content="2017-05-09T04:02:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Node.js学习笔记（一）：内存控制与垃圾回收》">
 <meta name="twitter:description" content="Node就是一群前端的自嗨
 
 
 
-&amp;lt;-未完待续-&amp;gt;
-V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指">
+&amp;lt;-已太监-&amp;gt;
+V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指针到">
 <meta name="twitter:image" content="http://ohhpn0w2k.bkt.clouddn.com/20140725225453475.jpg">
 
 
@@ -393,7 +393,7 @@ V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分�
 
 
 
-<p>&lt;-未完待续-&gt;</p>
+<p>&lt;-已太监-&gt;</p>
 <h2 id="V8的垃圾回收机制"><a href="#V8的垃圾回收机制" class="headerlink" title="V8的垃圾回收机制"></a>V8的垃圾回收机制</h2><h3 id="Scavenge算法"><a href="#Scavenge算法" class="headerlink" title="Scavenge算法"></a>Scavenge算法</h3><p>之前已经提到过，在V8将内存分为新生代和老生代两部分。而内存的分配主要集中在新生代部分，同时，新生代部分因为存活对象比较少，因此，新生代部分的垃圾回收主要使用scavenge算法。算法将新生代分成From区和To区，内存的分配主要是在From区中进行。当内存分配过程中allocationPtr指针到达From区结尾，就将触发垃圾回收机制。</p>
 <p><div align="center"><br><img src="http://ohhpn0w2k.bkt.clouddn.com/20140725225453475.jpg" alt=""><br></div></p>
 <blockquote>
@@ -402,6 +402,7 @@ V8的垃圾回收机制Scavenge算法之前已经提到过，在V8将内存分�
 <li>一个等价约定：<a href="http://newhtml.net/v8-garbage-collection/" title="V8之旅：垃圾回收器" rel="external nofollow noopener noreferrer" target="_blank">如果一个对象可经由某个被定义为活跃对象的对象，通过某个指针链所访问，则它就是活跃的。其他的都被视为垃圾</a></li>
 </ol>
 </blockquote>
+<a id="more"></a>
 <h4 id="算法基本流程"><a href="#算法基本流程" class="headerlink" title="算法基本流程"></a>算法基本流程</h4><p>算法对应的伪码如下描述：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">def scavenge():</div><div class="line">  swap(fromSpace, toSpace)</div><div class="line">  allocationPtr = toSpace.bottom</div><div class="line">  scanPtr = toSpace.bottom</div><div class="line"></div><div class="line">  <span class="keyword">for</span> i = <span class="number">0.</span>.len(roots):</div><div class="line">    root = roots[i]</div><div class="line">    <span class="keyword">if</span> inFromSpace(root):</div><div class="line">      rootCopy = copyObject(&amp;allocationPtr, root)</div><div class="line">      setForwardingAddress(root, rootCopy)</div><div class="line">      roots[i] = rootCopy</div><div class="line"></div><div class="line">  <span class="keyword">while</span> scanPtr &lt; allocationPtr:</div><div class="line">    obj = object at scanPtr</div><div class="line">    scanPtr += size(obj)</div><div class="line">    n = sizeInWords(obj)</div><div class="line">    <span class="keyword">for</span> i = <span class="number">0.</span>.n:</div><div class="line">      <span class="keyword">if</span> isPointer(obj[i]) <span class="keyword">and</span> not inOldSpace(obj[i]):</div><div class="line">        fromNeighbor = obj[i]</div><div class="line">        <span class="keyword">if</span> hasForwardingAddress(fromNeighbor):</div><div class="line">          toNeighbor = getForwardingAddress(fromNeighbor)</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">          toNeighbor = copyObject(&amp;allocationPtr, fromNeighbor)</div><div class="line">          setForwardingAddress(fromNeighbor, toNeighbor)</div><div class="line">        obj[i] = toNeighbor</div><div class="line"></div><div class="line">def copyObject(*allocationPtr, object):</div><div class="line">  copy = *allocationPtr</div><div class="line">  *allocationPtr += size(object)</div><div class="line">  memcpy(copy, object, size(object))</div><div class="line">  <span class="keyword">return</span> copy</div></pre></td></tr></table></figure></p>
 <p>算法主要有下述几个步骤组成：</p>
 <ul>
